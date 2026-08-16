@@ -1,97 +1,57 @@
-# Final Sales Automation Project
+# 💰 Finance Automation
 
-A Python-based business automation project that reads multiple Excel sales files, validates and processes the data, generates reports, and eventually sends the report to a client through email.
+A Python-based Finance Automation system that reads sales data from multiple Excel files, validates and processes the data, removes duplicates, generates summary reports, creates Excel and PDF reports, and sends the final reports through email.
 
-This project is being built step-by-step to simulate a real-world company automation workflow.
-
----
-
-# Project Goal
-
-The final automation workflow will be:
-
-Excel Files
-    ↓
-Read Excel Data
-    ↓
-Validate & Clean Data
-    ↓
-Process Sales Data
-    ↓
-Generate Excel Report
-    ↓
-Generate PDF Report
-    ↓
-Send Report via Email
-    ↓
-Log Automation Result
+The project also includes a Streamlit dashboard that allows users to run the complete automation from a single interface.
 
 ---
 
-# Technologies Used
+## 🚀 Project Overview
 
-- Python
-- openpyxl
-- pathlib
-- smtplib
-- email
-- python-dotenv
-- ReportLab
-- logging
+The goal of this project is to automate a typical Finance Department reporting workflow.
 
----
+Instead of manually:
 
-# Project Structure
+- Collecting Excel files
+- Checking invalid records
+- Removing duplicate records
+- Calculating sales totals
+- Preparing employee summaries
+- Preparing product summaries
+- Creating Excel reports
+- Creating PDF reports
+- Sending reports through email
 
-```text
-final_automation/
-│
-├── input/
-│   ├── sales_january.xlsx
-│   ├── sales_february.xlsx
-│   └── sales_march.xlsx
-│
-├── output/
-│
-├── logs/
-│
-├── src/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── excel_reader.py
-│   └── data_processor.py
-│
-├── .env
-├── .gitignore
-├── requirements.txt
-└── README.md
+The entire process can be executed automatically.
 
+### Manual Process
 
+    Excel Files
+         ↓
+    Manual Checking
+         ↓
+    Manual Calculations
+         ↓
+    Excel Report
+         ↓
+    PDF Report
+         ↓
+    Email
 
-After Part 3, the project works like this:
+### Automated Process
 
-                  Excel Files
-                       │
-                       ▼
-               excel_reader.py
-                       │
-                       ▼
-                Raw Data
-                       │
-                       ▼
-              data_processor.py
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-      Validation   Duplicates   Calculations
-          │            │            │
-          └────────────┼────────────┘
-                       ▼
-                Processed Data
-                       │
-                       ▼
-                    main.py
-
-
-
-                    
+    Upload Excel Files
+            ↓
+    Python Automation
+            ↓
+    Validation
+            ↓
+    Duplicate Removal
+            ↓
+    Calculations
+            ↓
+    Excel Report
+            ↓
+    PDF Report
+            ↓
+    Email
